@@ -1,0 +1,38 @@
+[data-theme="lil-dragon"] {
+  // Основные цвета - драконьи красные/розовые
+  --fc-bg-primary: #fef2f2;
+  --fc-bg-secondary: #fee2e2;
+  --fc-bg-tertiary: #fecaca;
+
+  // Текст
+  --fc-text-primary: #7f1d1d;
+  --fc-text-secondary: #dc2626;
+  --fc-text-muted: #f87171;
+  --fc-text-inverse: #fef2f2;
+
+  // Акцентные цвета
+  --fc-primary: #ef4444;
+  --fc-primary-hover: #dc2626;
+  --fc-secondary: #f87171;
+  --fc-accent: #fb7185;
+
+  // Границы
+  --fc-border: #fca5a5;
+  --fc-border-light: #fecaca;
+  --fc-border-dark: #f87171;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #fee2e2;
+  --fc-pomodoro-active: #dc2626;
+  --fc-pomodoro-rest: #10b981;
+  --fc-focus-ring: rgba(239, 68, 68, 0.3);
+
+  // Тени
+  --fc-shadow-sm: 0 1px 3px 0 rgb(239 68 68 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(239 68 68 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(239 68 68 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(254, 226, 226, 0.8);
+  --fc-glass-border: rgba(239, 68, 68, 0.1);
+}

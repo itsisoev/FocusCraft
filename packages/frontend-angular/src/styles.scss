@@ -1,0 +1,67 @@
+@use "styles/index";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--fc-bg-primary);
+  color: var(--fc-text-primary);
+  transition: background-color var(--fc-transition),
+  color var(--fc-transition);
+  min-height: 100vh;
+}
+
+.pomodoro-timer {
+  background: var(--fc-pomodoro-bg);
+  border-radius: var(--fc-border-radius-lg);
+  padding: 32px;
+  box-shadow: var(--fc-shadow-xl);
+
+  &.active {
+    border: 2px solid var(--fc-pomodoro-active);
+  }
+
+  &.rest {
+    border: 2px solid var(--fc-pomodoro-rest);
+  }
+}
+
+.task-item {
+  margin-bottom: 12px;
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: var(--fc-shadow-lg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--fc-transition) ease-out;
+}

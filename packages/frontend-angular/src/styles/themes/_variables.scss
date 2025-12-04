@@ -1,0 +1,45 @@
+:root {
+  // Основные цвета
+  --fc-primary: #6366f1;
+  --fc-secondary: #8b5cf6;
+  --fc-accent: #06b6d4;
+
+  // Статусные цвета
+  --fc-success: #10b981;
+  --fc-warning: #f59e0b;
+  --fc-danger: #ef4444;
+  --fc-info: #3b82f6;
+
+  // Размеры
+  --fc-border-radius: 12px;
+  --fc-border-radius-sm: 8px;
+  --fc-border-radius-lg: 16px;
+
+  // Тени
+  --fc-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --fc-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --fc-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  // Анимации
+  --fc-transition-fast: 150ms;
+  --fc-transition: 300ms;
+  --fc-transition-slow: 500ms;
+
+  // Семейство шрифтов
+  --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+
+  // Закругления
+  --fc-border-radius-round: 50%;
+
+  // Z-index уровни
+  --fc-z-dropdown: 1000;
+  --fc-z-sticky: 1020;
+  --fc-z-fixed: 1030;
+  --fc-z-modal-backdrop: 1040;
+  --fc-z-modal: 1050;
+  --fc-z-popover: 1060;
+  --fc-z-tooltip: 1070;
+
+
+}

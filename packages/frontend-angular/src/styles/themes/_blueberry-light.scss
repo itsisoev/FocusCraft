@@ -1,0 +1,38 @@
+[data-theme="blueberry-light"] {
+  // Основные цвета - ягодные синие
+  --fc-bg-primary: #eff6ff;
+  --fc-bg-secondary: #dbeafe;
+  --fc-bg-tertiary: #bfdbfe;
+
+  // Текст
+  --fc-text-primary: #1e3a8a;
+  --fc-text-secondary: #3b82f6;
+  --fc-text-muted: #60a5fa;
+  --fc-text-inverse: #eff6ff;
+
+  // Акцентные цвета
+  --fc-primary: #2563eb;
+  --fc-primary-hover: #1d4ed8;
+  --fc-secondary: #3b82f6;
+  --fc-accent: #0ea5e9;
+
+  // Границы
+  --fc-border: #93c5fd;
+  --fc-border-light: #bfdbfe;
+  --fc-border-dark: #60a5fa;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #dbeafe;
+  --fc-pomodoro-active: #ef4444;
+  --fc-pomodoro-rest: #10b981;
+  --fc-focus-ring: rgba(37, 99, 235, 0.3);
+
+  // Тени
+  --fc-shadow-sm: 0 1px 3px 0 rgb(37 99 235 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(37 99 235 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(37 99 235 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(219, 234, 254, 0.8);
+  --fc-glass-border: rgba(37, 99, 235, 0.1);
+}

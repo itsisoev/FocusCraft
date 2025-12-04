@@ -1,0 +1,38 @@
+[data-theme="alpine"] {
+  // Основные цвета - альпийские зеленые
+  --fc-bg-primary: #f0fdf4;
+  --fc-bg-secondary: #dcfce7;
+  --fc-bg-tertiary: #bbf7d0;
+
+  // Текст
+  --fc-text-primary: #14532d;
+  --fc-text-secondary: #16a34a;
+  --fc-text-muted: #4ade80;
+  --fc-text-inverse: #f0fdf4;
+
+  // Акцентные цвета
+  --fc-primary: #22c55e;
+  --fc-primary-hover: #16a34a;
+  --fc-secondary: #4ade80;
+  --fc-accent: #10b981;
+
+  // Границы
+  --fc-border: #86efac;
+  --fc-border-light: #bbf7d0;
+  --fc-border-dark: #4ade80;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #dcfce7;
+  --fc-pomodoro-active: #ef4444;
+  --fc-pomodoro-rest: #3b82f6;
+  --fc-focus-ring: rgba(34, 197, 94, 0.3);
+
+  // Тени
+  --fc-shadow-sm: 0 1px 3px 0 rgb(34 197 94 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(34 197 94 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(34 197 94 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(220, 252, 231, 0.8);
+  --fc-glass-border: rgba(34, 197, 94, 0.1);
+}

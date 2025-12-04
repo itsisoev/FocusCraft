@@ -1,0 +1,77 @@
+<div class="theme-container">
+  <button
+    class="theme-trigger"
+    (click)="toggleThemePanel()"
+    [attr.aria-label]="isPanelOpen() ? 'Close theme panel' : 'Open theme panel'"
+  >
+    <div class="theme-icon">
+      <div class="palette-icon">🎨</div>
+    </div>
+    @if (!isPanelOpen()) {
+      <span class="theme-label">Theme</span>
+    }
+  </button>
+
+  <div class="theme-panel" [class.open]="isPanelOpen()">
+    <div class="theme-panel-header">
+      <h3 class="theme-panel-title">Select Theme</h3>
+      <button
+        class="theme-panel-close"
+        (click)="closePanel()"
+        aria-label="Close theme panel"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div class="theme-grid">
+      @for (theme of themes(); track theme.id) {
+        <div
+          class="theme-card"
+          [class.active]="theme.id === currentTheme()"
+          (click)="selectTheme(theme.id)"
+          [attr.aria-label]="'Select ' + theme.name + ' theme'"
+        >
+          <div class="theme-card-preview" [style.background]="theme.preview">
+            <div class="theme-card-demo">
+              <div class="demo-header"></div>
+              <div class="demo-content">
+                <div class="demo-item"></div>
+                <div class="demo-item"></div>
+                <div class="demo-item"></div>
+              </div>
+            </div>
+          </div>
+          <div class="theme-card-info">
+            <span class="theme-card-name">{{ theme.name }}</span>
+            @if (theme.id === currentTheme()) {
+              <span class="theme-card-status">✓ Active</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="theme-toggle-section">
+      <label class="theme-toggle-label">
+        <span class="toggle-text">Dark Mode</span>
+        <div
+          class="theme-toggle"
+          [class.active]="getIsDarkTheme()"
+          (click)="toggleDarkMode()"
+          role="switch"
+          [attr.aria-checked]="getIsDarkTheme()"
+        >
+          <div class="toggle-slider"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  @if (isPanelOpen()) {
+    <div
+      class="theme-overlay"
+      (click)="closePanel()"
+    ></div>
+  }
+</div>

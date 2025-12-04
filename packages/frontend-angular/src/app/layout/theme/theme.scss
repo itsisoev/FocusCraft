@@ -1,0 +1,273 @@
+.theme-container {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: var(--fc-z-popover);
+}
+
+.theme-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--fc-bg-secondary);
+  border: 0.0625rem solid var(--fc-border);
+  border-radius: var(--fc-border-radius-lg);
+  color: var(--fc-text-primary);
+  cursor: pointer;
+  box-shadow: var(--fc-shadow-lg);
+
+
+  &:hover {
+    background: var(--fc-bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: var(--fc-shadow-xl);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.theme-icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.palette-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+
+
+.theme-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.theme-panel {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 0;
+  width: 20rem;
+  background: var(--fc-bg-secondary);
+  border-radius: var(--fc-border-radius-lg);
+  border: 0.0625rem solid var(--fc-border);
+  box-shadow: var(--fc-shadow-xl);
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+
+
+  &.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.theme-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 0.0625rem solid var(--fc-border-light);
+}
+
+.theme-panel-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fc-text-primary);
+  margin: 0;
+}
+
+.theme-panel-close {
+  background: none;
+  border: none;
+  color: var(--fc-text-secondary);
+  font-size: 1.125rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background: var(--fc-bg-tertiary);
+    color: var(--fc-text-primary);
+  }
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  max-height: 25rem;
+  overflow-y: auto;
+}
+
+.theme-card {
+  border: 0.125rem solid var(--fc-border);
+  border-radius: var(--fc-border-radius);
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--fc-primary);
+    box-shadow: var(--fc-shadow-lg);
+  }
+
+  &.active {
+    border-color: var(--fc-primary);
+    box-shadow: 0 0 0 3px var(--fc-focus-ring);
+  }
+}
+
+.theme-card-preview {
+  height: 6.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-card-demo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background: var(--fc-bg-tertiary);
+  border: 1px solid var(--fc-border-light);
+}
+
+.demo-header {
+  height: 1.25rem;
+  background: var(--fc-bg-secondary);
+  border-bottom: 1px solid var(--fc-border);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.demo-header::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--fc-danger);
+  margin-right: 0.25rem;
+}
+
+.demo-header::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--fc-warning);
+  margin-right: 0.25rem;
+}
+
+.demo-header::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--fc-success);
+}
+
+.demo-content {
+  padding: 0.75rem;
+}
+
+.demo-item {
+  height: 0.5rem;
+  background: var(--fc-text-muted);
+  margin-bottom: 0.375rem;
+  border-radius: 0.25rem;
+  opacity: 0.7;
+
+  &:nth-child(1) {
+    width: 90%;
+  }
+
+  &:nth-child(2) {
+    width: 70%;
+    background: var(--fc-primary);
+    opacity: 0.9;
+  }
+
+  &:nth-child(3) {
+    width: 50%;
+    background: var(--fc-accent);
+    opacity: 0.8;
+  }
+}
+
+.theme-card-info {
+  padding: 0.75rem;
+  background: var(--fc-bg-primary);
+}
+
+.theme-card-name {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--fc-text-primary);
+}
+
+.theme-card-status {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--fc-primary);
+  margin-top: 0.125rem;
+}
+
+.theme-toggle-section {
+  padding: 1.25rem 1.5rem;
+  border-top: 0.0625rem solid var(--fc-border-light);
+}
+
+.theme-toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 0.875rem;
+  color: var(--fc-text-primary);
+}
+
+.theme-toggle {
+  width: 2.75rem;
+  height: 1.5rem;
+  background: var(--fc-border);
+  border-radius: 0.75rem;
+  position: relative;
+  cursor: pointer;
+
+
+  &.active {
+    background: var(--fc-primary);
+
+    .toggle-slider {
+      transform: translateX(1.25rem);
+    }
+  }
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: white;
+  border-radius: 50%;
+}
+
+

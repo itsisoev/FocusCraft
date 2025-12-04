@@ -1,0 +1,38 @@
+[data-theme="serika-dark"] {
+  // Основные цвета
+  --fc-bg-primary: #1a1a1a;
+  --fc-bg-secondary: #2d2d2d;
+  --fc-bg-tertiary: #3d3d3d;
+
+  // Текст
+  --fc-text-primary: #e4e4e4;
+  --fc-text-secondary: #a0a0a0;
+  --fc-text-muted: #6b6b6b;
+  --fc-text-inverse: #1a1a1a;
+
+  // Акцентные цвета (Serika темная палитра)
+  --fc-primary: #4f46e5;
+  --fc-primary-hover: #4338ca;
+  --fc-secondary: #7c3aed;
+  --fc-accent: #06b6d4;
+
+  // Границы
+  --fc-border: #404040;
+  --fc-border-light: #2d2d2d;
+  --fc-border-dark: #525252;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #2d2d2d;
+  --fc-pomodoro-active: #dc2626;
+  --fc-pomodoro-rest: #10b981;
+  --fc-focus-ring: rgba(79, 70, 229, 0.5);
+
+  // Тени (темные темы нуждаются в более ярких тенях)
+  --fc-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --fc-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+
+  // Эффекты
+  --fc-glass-bg: rgba(45, 45, 45, 0.8);
+  --fc-glass-border: rgba(255, 255, 255, 0.1);
+}

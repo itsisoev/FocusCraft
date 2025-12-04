@@ -1,0 +1,38 @@
+[data-theme="purpleish"] {
+  // Основные цвета - фиолетовые
+  --fc-bg-primary: #faf5ff;
+  --fc-bg-secondary: #f3e8ff;
+  --fc-bg-tertiary: #e9d5ff;
+
+  // Текст
+  --fc-text-primary: #581c87;
+  --fc-text-secondary: #9333ea;
+  --fc-text-muted: #c084fc;
+  --fc-text-inverse: #faf5ff;
+
+  // Акцентные цвета
+  --fc-primary: #a855f7;
+  --fc-primary-hover: #9333ea;
+  --fc-secondary: #c084fc;
+  --fc-accent: #d946ef;
+
+  // Границы
+  --fc-border: #d8b4fe;
+  --fc-border-light: #e9d5ff;
+  --fc-border-dark: #c084fc;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #f3e8ff;
+  --fc-pomodoro-active: #ef4444;
+  --fc-pomodoro-rest: #10b981;
+  --fc-focus-ring: rgba(168, 85, 247, 0.3);
+
+  // Тени
+  --fc-shadow-sm: 0 1px 3px 0 rgb(168 85 247 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(168 85 247 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(168 85 247 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(243, 232, 255, 0.8);
+  --fc-glass-border: rgba(168, 85, 247, 0.1);
+}

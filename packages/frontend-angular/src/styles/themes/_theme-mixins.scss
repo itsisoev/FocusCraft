@@ -1,0 +1,64 @@
+@mixin theme-transition {
+  transition: background-color var(--fc-transition),
+  color var(--fc-transition),
+  border-color var(--fc-transition),
+  box-shadow var(--fc-transition);
+}
+
+// Миксин для стеклянного эффекта
+@mixin glass-effect {
+  background: var(--fc-glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--fc-glass-border);
+}
+
+// Миксин для кнопок темы
+@mixin theme-button {
+  padding: 8px 16px;
+  border-radius: var(--fc-border-radius);
+  border: 1px solid var(--fc-border);
+  background: var(--fc-bg-secondary);
+  color: var(--fc-text-primary);
+  cursor: pointer;
+  @include theme-transition;
+
+  &:hover {
+    background: var(--fc-bg-tertiary);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Миксин для карточек
+@mixin card {
+  background: var(--fc-bg-secondary);
+  border-radius: var(--fc-border-radius-lg);
+  border: 1px solid var(--fc-border);
+  padding: 24px;
+  box-shadow: var(--fc-shadow);
+  @include theme-transition;
+}
+
+// Миксин для инпутов
+@mixin input {
+  background: var(--fc-bg-primary);
+  border: 2px solid var(--fc-border);
+  border-radius: var(--fc-border-radius-sm);
+  padding: 12px 16px;
+  color: var(--fc-text-primary);
+  font-family: var(--fc-font-family);
+  @include theme-transition;
+
+  &:focus {
+    outline: none;
+    border-color: var(--fc-primary);
+    box-shadow: 0 0 0 3px var(--fc-focus-ring);
+  }
+
+  &::placeholder {
+    color: var(--fc-text-muted);
+  }
+}

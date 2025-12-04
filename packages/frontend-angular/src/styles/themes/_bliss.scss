@@ -1,0 +1,38 @@
+[data-theme="bliss"] {
+  // Основные цвета - блаженные желтые
+  --fc-bg-primary: #fefce8;
+  --fc-bg-secondary: #fef9c3;
+  --fc-bg-tertiary: #fef08a;
+
+  // Текст
+  --fc-text-primary: #854d0e;
+  --fc-text-secondary: #ca8a04;
+  --fc-text-muted: #eab308;
+  --fc-text-inverse: #fefce8;
+
+  // Акцентные цвета
+  --fc-primary: #eab308;
+  --fc-primary-hover: #ca8a04;
+  --fc-secondary: #facc15;
+  --fc-accent: #f59e0b;
+
+  // Границы
+  --fc-border: #fde047;
+  --fc-border-light: #fef08a;
+  --fc-border-dark: #facc15;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #fef9c3;
+  --fc-pomodoro-active: #ef4444;
+  --fc-pomodoro-rest: #10b981;
+  --fc-focus-ring: rgba(234, 179, 8, 0.3);
+
+  // Тени
+  --fc-shadow-sm: 0 1px 3px 0 rgb(234 179 8 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(234 179 8 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(234 179 8 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(254, 249, 195, 0.8);
+  --fc-glass-border: rgba(234, 179, 8, 0.1);
+}

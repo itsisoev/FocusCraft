@@ -1,0 +1,38 @@
+[data-theme="lilac-mist"] {
+  // Нежные лиловые тона
+  --fc-bg-primary: #faf5ff;
+  --fc-bg-secondary: #f3e8ff;
+  --fc-bg-tertiary: #e9d5ff;
+
+  // Текст
+  --fc-text-primary: #4c1d95;
+  --fc-text-secondary: #7c3aed;
+  --fc-text-muted: #a78bfa;
+  --fc-text-inverse: #faf5ff;
+
+  // Акцентные цвета
+  --fc-primary: #8b5cf6;
+  --fc-primary-hover: #7c3aed;
+  --fc-secondary: #c4b5fd;
+  --fc-accent: #a78bfa;
+
+  // Границы
+  --fc-border: #ddd6fe;
+  --fc-border-light: #ede9fe;
+  --fc-border-dark: #c4b5fd;
+
+  // Специальные элементы
+  --fc-pomodoro-bg: #f3e8ff;
+  --fc-pomodoro-active: #f87171;
+  --fc-pomodoro-rest: #34d399;
+  --fc-focus-ring: rgba(139, 92, 246, 0.3);
+
+  // Тени мягкие
+  --fc-shadow-sm: 0 1px 3px 0 rgb(139 92 246 / 0.1);
+  --fc-shadow: 0 4px 6px -1px rgb(139 92 246 / 0.1);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(139 92 246 / 0.1);
+
+  // Эффекты
+  --fc-glass-bg: rgba(243, 232, 255, 0.8);
+  --fc-glass-border: rgba(139, 92, 246, 0.1);
+}
