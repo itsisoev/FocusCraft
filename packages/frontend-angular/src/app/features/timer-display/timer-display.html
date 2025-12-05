@@ -1,0 +1,48 @@
+<div class="timer">
+  <div class="timer__progress">
+    <svg class="timer__progress-circle" width="320" height="320">
+      <circle class="timer__progress-bg"
+              cx="160" cy="160" r="150"
+              stroke-width="12" fill="transparent"/>
+      <circle class="timer__progress-fill"
+              cx="160" cy="160" r="150"
+              stroke-width="12" fill="transparent"
+              stroke-dasharray="942" stroke-dashoffset="0"/>
+    </svg>
+
+    <div class="timer__display">
+      <div class="timer__time">
+        <span class="timer__minutes">25</span>
+        <span class="timer__separator">:</span>
+        <span class="timer__seconds">00</span>
+      </div>
+      <div class="timer__mode">
+        <span class="timer__mode-label timer__mode-label--focus">Focus</span>
+        <span class="timer__mode-label timer__mode-label--break">Break</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timer__controls">
+    <ui-button
+      [variant]="'primary'"
+      [size]="'lg'"
+    >
+      Start
+    </ui-button>
+
+    <ui-button
+      [variant]="'secondary'"
+      [size]="'lg'"
+    >
+      Reset
+    </ui-button>
+
+    <ui-button
+      [variant]="'danger'"
+      [size]="'lg'"
+    >
+      Finish
+    </ui-button>
+  </div>
+</div>

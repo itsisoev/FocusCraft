@@ -1,0 +1,14 @@
+<button
+  [class]="buttonClasses"
+  [type]="type()"
+  [disabled]="disabled() || loading()"
+  [attr.aria-busy]="loading()"
+  [attr.aria-disabled]="disabled()"
+  (click)="onClick($event)"
+>
+  @if (loading()) {
+    <span class="button__loader" aria-hidden="true"></span>
+  }
+
+  <ng-content></ng-content>
+</button>

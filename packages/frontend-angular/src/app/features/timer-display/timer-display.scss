@@ -1,0 +1,239 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--fc-bg-primary);
+  transition: all var(--fc-transition);
+
+  &__progress {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 3rem;
+  }
+
+  &__progress-circle {
+    transform: rotate(-90deg);
+  }
+
+  &__progress-bg {
+    stroke: var(--fc-border);
+    opacity: 0.2;
+    transition: stroke var(--fc-transition);
+  }
+
+  &__progress-fill {
+    stroke: var(--fc-primary);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s linear, stroke var(--fc-transition);
+  }
+
+  &__display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    user-select: none;
+  }
+
+  &__time {
+    font-size: 3.9rem;
+    font-weight: 700;
+    color: var(--fc-text-primary);
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  &__minutes,
+  &__seconds {
+    display: inline-block;
+    min-width: 2ch;
+  }
+
+  &__separator {
+    animation: pulse 1s infinite;
+    color: var(--fc-accent);
+  }
+
+  &__mode {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__mode-label {
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.4;
+    transition: all var(--fc-transition);
+
+    &--focus {
+      background: rgba(var(--fc-primary-rgb, 79, 70, 229), 0.1);
+      color: var(--fc-primary);
+
+      &.timer__mode-label--active {
+        opacity: 1;
+        box-shadow: 0 0 0 2px var(--fc-primary);
+      }
+    }
+
+    &--break {
+      background: rgba(var(--fc-success-rgb, 16, 185, 129), 0.1);
+      color: var(--fc-success);
+
+      &.timer__mode-label--active {
+        opacity: 1;
+        box-shadow: 0 0 0 2px var(--fc-success);
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    border: none;
+    border-radius: var(--fc-border-radius-lg);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--fc-transition);
+    min-width: 140px;
+    justify-content: center;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--fc-shadow-lg);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &--primary {
+      background: var(--fc-primary);
+      color: white;
+
+      &:hover {
+        background: var(--fc-primary-hover);
+        box-shadow: 0 8px 24px rgba(var(--fc-primary-rgb, 79, 70, 229), 0.3);
+      }
+    }
+
+    &--secondary {
+      background: var(--fc-bg-secondary);
+      color: var(--fc-text-primary);
+      border: 1px solid var(--fc-border);
+
+      &:hover {
+        background: var(--fc-bg-tertiary);
+        border-color: var(--fc-primary);
+      }
+    }
+
+    &--danger {
+      background: var(--fc-danger);
+      color: white;
+
+      &:hover {
+        background: #ef4444;
+        box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+      }
+    }
+  }
+
+  &__btn-icon {
+    font-size: 1.5rem;
+    transition: transform var(--fc-transition);
+  }
+
+  &__btn-text {
+    transition: transform var(--fc-transition);
+  }
+
+  &--running &__btn--primary {
+    .timer__btn-icon {
+      content: '⏸️';
+    }
+
+    .timer__btn-text {
+      content: 'Pause';
+    }
+  }
+
+  &--break &__progress-fill {
+    stroke: var(--fc-success);
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__progress {
+      width: 280px;
+      height: 280px;
+    }
+
+    &__time {
+      font-size: 4rem;
+    }
+
+    &__controls {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &__btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__progress {
+      width: 240px;
+      height: 240px;
+    }
+
+    &__time {
+      font-size: 3.5rem;
+    }
+
+    &__btn {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  &--light &__progress-bg {
+    opacity: 0.1;
+  }
+
+  &--dark &__progress-bg {
+    opacity: 0.3;
+  }
+}
