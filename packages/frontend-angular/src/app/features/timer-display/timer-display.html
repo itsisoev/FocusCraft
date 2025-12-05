@@ -1,4 +1,9 @@
 <div class="timer">
+  <div class="timer__connection-status" [class.connected]="isConnected()">
+    {{ isConnected() ? '🟢 Синхронизировано' : '🔴 Локальный режим' }}
+  </div>
+
+
   <div class="timer__progress">
     <svg class="timer__progress-circle" width="320" height="320">
       <circle class="timer__progress-bg"
@@ -12,9 +17,9 @@
 
     <div class="timer__display">
       <div class="timer__time">
-        <span class="timer__minutes">25</span>
+        <span class="timer__minutes">{{displayMinutes()}}</span>
         <span class="timer__separator">:</span>
-        <span class="timer__seconds">00</span>
+        <span class="timer__seconds">{{displaySeconds()}}</span>
       </div>
       <div class="timer__mode">
         <span class="timer__mode-label timer__mode-label--focus">Focus</span>
@@ -25,15 +30,19 @@
 
   <div class="timer__controls">
     <ui-button
-      [variant]="'primary'"
+      [variant]="buttonVariant()"
       [size]="'lg'"
+
+      (clicked)="toggleTimer()"
     >
-      Start
+      {{ buttonText() }}
     </ui-button>
 
     <ui-button
       [variant]="'secondary'"
       [size]="'lg'"
+
+      (clicked)="resetTimer()"
     >
       Reset
     </ui-button>
@@ -41,6 +50,8 @@
     <ui-button
       [variant]="'danger'"
       [size]="'lg'"
+
+      (clicked)="finishTimer()"
     >
       Finish
     </ui-button>
